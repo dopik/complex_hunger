@@ -39,13 +39,6 @@ local function compost_on_timer(pos, elapsed)
 	local runtime = meta:get_float("runtime") or 0
 	local fuel = meta:get_int("fuel") or 0
 	
-	minetest.chat_send_all("Ich mach was")
-	minetest.chat_send_all(fuel)
-	minetest.chat_send_all(runtime)
-	minetest.chat_send_all(src_totaltime)
-	minetest.chat_send_all(src_time)
-	
-	
 	runtime = math.min(runtime +math.min(fuel, elapsed), src_totaltime)
 	fuel = fuel - math.min(fuel, elapsed, src_totaltime)
 	
