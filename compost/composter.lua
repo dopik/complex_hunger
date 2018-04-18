@@ -1,8 +1,6 @@
 local function update_formspec(pos, runtime_percent)
 	local meta = minetest.get_meta(pos)
 	
-	minetest.chat_send_all(runtime_percent)
-	
 	local formspec = 
 		"size[8,7.5]"..
 		"list[context;input;0.5,0;1,1;4]"..
