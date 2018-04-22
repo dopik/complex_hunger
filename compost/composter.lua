@@ -175,13 +175,6 @@ minetest.register_node("compost:composter",{
 		inv:set_size("input", 5)
 		inv:set_size("output", 4)
 		timer:start(0.1)
-		
-		inv:set_stack("input", 1, ItemStack("default:dirt"))
-		inv:set_stack("input", 2, ItemStack("default:stone"))
-		inv:set_stack("input", 3, ItemStack("default:cobble"))
-		inv:set_stack("input", 4, ItemStack("default:glass"))
-		inv:set_stack("input", 5, ItemStack("default:dirt_with_grass"))
-		
 	end,
 	allow_metadata_inventory_put = function(pos, listname, index, stack, player)		
 		local meta = minetest.get_meta(pos)
