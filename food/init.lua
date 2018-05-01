@@ -236,6 +236,8 @@ function plants.functions.register_plant(name, growsteps, textures)
 				if light <= v_min_light and light >= v_max_light then
 					plant:change_badness(10)
 				end
+					
+				plant:write()
 				
 				local c = true
 				if light >= v_cur_min_light and light <= v_cur_max_light then
